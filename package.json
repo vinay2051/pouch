@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vinay2051/pouch/issues"
   },
-  "homepage": "https://github.com/vinay2051/pouch#readme"
+  "homepage": "https://github.com/vinay2051/pouch#readme",
+  "dependencies": {
+    "pouchdb": "^6.2.0"
+  }
 }
