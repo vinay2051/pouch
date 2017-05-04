@@ -1,0 +1,36 @@
+db.get(doc).then(function(doc){
+
+});
+
+db.put(doc);
+
+db.remove(doc);
+
+var db = new require('pouchdb')('name');
+
+db.bulkDocs([{},{},{}]);
+
+db.allDocs({include_docs: true});
+
+result.rows[].doc
+
+
+function convertImgToBlob(img, callback) {
+   var canvas = document.createElement('canvas');
+   var context = canvas.getContext('2d');
+   context.drawImage(img, 0, 0);
+
+    // Warning: toBlob() isn't supported by every browser.
+    // You may want to use blob-util.
+   canvas.toBlob(callback, 'image/png');
+}
+
+var catImage = document.getElementById('cat');
+convertImgToBlob(catImage, function (blob) {
+  db.putAttachment('meowth', 'meowth.png', blob, 'image/png').then(function () {
+    return db.get('meowth', {attachments: true});
+  }).then(function (doc) {
+    console.log(doc);
+  });
+});
+

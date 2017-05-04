@@ -1,0 +1,81 @@
+var PouchDB = require('pouchdb');
+
+var db = new PouchDB('kittens');
+
+var doc = {
+    "_id": "1",
+    "name": "vinay"
+};
+
+//db.put(doc);
+
+//db.get('1').then(function(doc){
+//    console.log(doc);
+//});
+
+//db.get('1').then(function (doc) {
+//  doc.name = 'arun';
+//  return db.put(doc);
+//}).then(function () {
+//  return db.get('1');
+//}).then(function (doc) {
+//  console.log(doc);
+//});
+
+//db.get('2').catch(function(err){
+//    if(err.name === 'not_found'){
+//        return {
+//            '_id': "2",
+//            'name': "vinay"
+//        };
+//    }else{
+//        throw err;
+//    }
+//}).then(function(def){
+//   console.log(def); 
+//}).catch(function(err){
+//    throw err;
+//});
+
+//db.put({
+//    _id: 'myDoc',
+//    _attachments: {
+//        'cheatsheet.txt': {
+//            content_type: 'text/plain',
+//            data: 'aGVsbG8gd29ybGQ=' 
+//        }
+//    }
+//});
+
+//db.get('myDoc',{attachments: true}).then(function(doc){
+//    console.log(doc);
+//});
+
+//db.put({
+//  _id: 'meowth',
+//  _attachments: {
+//    'meowth.png': {
+//      content_type: 'image/png',
+//      data: 'iVBORw0KGgoAAAANSUhEUgAAACgAAAAkCAIAAAB0Xu9BAAAABGdBTUEAALGPC/xhBQAAAuNJREFUWEetmD1WHDEQhDdxRMYlnBFyBIccgdQhKVcgJeQMpE5JSTd2uqnvIGpVUqmm9TPrffD0eLMzUn+qVnXPwiFd/PP6eLh47v7EaazbmxsOxjhTT88z9hV7GoNF1cUCvN7TTPv/gf/+uQPm862MWTL6fff4HfDx4S79/oVAlAUwqOmYR0rnazuFnhfOy/ErMKkcBFOr1vOjUi2MFn4nuMil6OPh5eGANLhW3y6u3aH7ijEDCxgCvzFmimvc95TekZLyMSeJC68Bkw0kqUy1K87FlpGZqsGFCyqEtQNDdFUtFctTiuhnPKNysid/WFEFLE2O102XJdEE+8IgeuGsjeJyGHm/xHvQ3JtKVsGGp85g9rK6xMHtvHO9+WACYjk5vkVM6XQ6OZubCJvTfPicYPeHO2AKFl5NuF5UK1VDUbeLxh2BcRGKTQE3irHm3+vPj6cfCod50Eqv5QxtwBQUGhZhbrGVuRia1B4MNp6edwBxld2sl1splfHCwfsvCZfrCQyWmX10djjOlWJSSy3VQlS6LmfrgNvaieRWx1LZ6s9co+P0DLsy3OdLU3lWRclQsVcHJBcUQ0k9/WVVrmpRzYQzpgAdQcAXxZzUnFX3proannrYH+Vq6KkLi+UkarH09mC8YPr2RMWOlEqFkQClsykGEv7CqCUbXcG8+SaGvJ4a8d4y6epND+pEhxoN0vWUu5ntXlFb5/JT7JfJJqoTdy9u9qc7ax3xJRHqJLADWEl23cFWl4K9fvoaCJ2BHpmJ3s3z+O0U/DmzdMjB9alWZtg4e3yxzPa7lUR7nkvxLHO9+tvJX3mtSDpwX8GajB283I8R8a7D2MhUZr1iNWdny256yYLd52DwRYBtRMvE7rsmtxIUE+zLKQCDO4jlxB6CZ8M17GhuY+XTE8vNhQiIiSE82ZsGwk1pht4ZSpT0YVpon6EvevOXXH8JxVR78QzNuamupW/7UB7wO/+7sG5V4ekXb4cL5Lyv+4IAAAAASUVORK5CYII='
+//    }
+//  }
+//}).then(function () {
+
+//db.getAttachment('meowth', 'meowth.png').then(function (blob) {
+//  var url = URL.createObjectURL(blob);
+//}).catch(function (err) {
+//  console.log(err);
+//});
+//var blob = require('blob-util');
+//var myBlob = blob.createBlob(['I am plain text!'], {type: 'text/plain'});
+//console.log(myBlob.type); // 'text/plain'
+//
+//db.put({
+//  _id: 'mydoc',
+//  _attachments: {
+//    'myattachment.txt': {
+//      content_type: 'text/plain',
+//      data: myBlob
+//    }
+//  }
+//});

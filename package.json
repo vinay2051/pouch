@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/vinay2051/pouch#readme",
   "dependencies": {
+    "blob": "0.0.4",
+    "blob-util": "^1.2.1",
     "pouchdb": "^6.2.0"
   }
 }
