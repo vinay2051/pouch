@@ -34,3 +34,11 @@ convertImgToBlob(catImage, function (blob) {
   });
 });
 
+db.changes({
+since: 'now'
+}).on('change',function(change){
+
+}).on('error',function(error){
+
+});
+
