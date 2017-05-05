@@ -19,6 +19,7 @@
   "dependencies": {
     "blob": "0.0.4",
     "blob-util": "^1.2.1",
-    "pouchdb": "^6.2.0"
+    "pouchdb": "^6.2.0",
+    "pouchdb-find": "^6.2.0"
   }
 }
