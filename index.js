@@ -17,9 +17,9 @@ localDB.sync(remoteDB, {
 }).on('error', function (err) {
 });
 
-//localDB.createIndex({
-//    index: {fields: ['name']}
-//});
+localDB.createIndex({
+    index: {fields: ['class']}
+});
 
 //localDB.find({
 //  selector: {
